@@ -1,0 +1,43 @@
+@model NTTMBT.Models.NTTM428Student
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>NTTM428Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CCCN" class="control-label"></label>
+                <input asp-for="CCCN" class="form-control" />
+                <span asp-validation-for="CCCN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenSinhVien" class="control-label"></label>
+                <input asp-for="TenSinhVien" class="form-control" />
+                <span asp-validation-for="TenSinhVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LopHoc" class="control-label"></label>
+                <input asp-for="LopHoc" class="form-control" />
+                <span asp-validation-for="LopHoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
